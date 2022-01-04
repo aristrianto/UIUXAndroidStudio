@@ -9,6 +9,7 @@ import android.widget.ImageView;
 
 public class presensi extends AppCompatActivity {
 ImageView abs;
+ImageView profile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +20,13 @@ ImageView abs;
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(presensi.this, dashboard.class));
+            }
+        });
+        profile = (ImageView) findViewById(R.id.imageView15);
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(presensi.this, profile.class));
             }
         });
     }
